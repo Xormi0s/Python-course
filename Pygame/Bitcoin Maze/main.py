@@ -17,12 +17,12 @@ coin_text = font.render("Coins:", True, WHITE)
 coin_counter_text = font.render(str(coin_counter), True, WHITE)
 
 mixer.init()
-mixer.music.load("Bitcoin Maze/cave.mp3")
+mixer.music.load("Pygame/Bitcoin Maze/cave.mp3")
 mixer.music.play()
 
-coin_sound = mixer.Sound("Bitcoin Maze/coin_drop.mp3")
-win_sound = mixer.Sound("Bitcoin Maze/win.wav")
-lose_sound = mixer.Sound("Bitcoin Maze/lose.wav")
+coin_sound = mixer.Sound("Pygame/Bitcoin Maze/coin_drop.mp3")
+win_sound = mixer.Sound("Pygame/Bitcoin Maze/win.wav")
+lose_sound = mixer.Sound("Pygame/Bitcoin Maze/lose.wav")
 
 WIDHT = 700
 HEIGHT = 500
@@ -31,11 +31,11 @@ FPS = 30
 screen = display.set_mode((WIDHT, HEIGHT))
 display.set_caption("Bitcoin Maze")
 clock = time.Clock()
-background = transform.scale(image.load("Bitcoin Maze/background.jpg"), (WIDHT, HEIGHT))
+background = transform.scale(image.load("Pygame/Bitcoin Maze/background.jpg"), (WIDHT, HEIGHT))
 
-player = Player("Bitcoin Maze/miner.png", 10, 50, 8)
-ghost = Ghost("Bitcoin Maze/ghost.png", 600, 200, 5)
-coin_wallet = Player("Bitcoin Maze/bitcoin.png", 625, 425, 0)
+player = Player("Pygame/Bitcoin Maze/miner.png", 10, 50, 8)
+ghost = Ghost("Pygame/Bitcoin Maze/ghost.png", 600, 200, 5)
+coin_wallet = Player("Pygame/Bitcoin Maze/bitcoin.png", 625, 425, 0)
 
 wall1 = Border(WALL_COLOR, 0, 0, WIDHT, 10)
 wall2 = Border(WALL_COLOR, 70, 10, 10, HEIGHT - 60)
@@ -108,7 +108,7 @@ while run:
             coin_counter = 0
             for c in coins:
                 c.kill()
-            player = Player("Bitcoin Maze/miner.png", 10, 50, 8)
+            player = Player("Pygame/Bitcoin Maze/miner.png", 10, 50, 8)
             coin_counter_text = font.render(str(coin_counter),True,WHITE)
             coin1 = Coins(randint(50, WIDHT), randint(50, HEIGHT))
             coin2 = Coins(randint(50, WIDHT), randint(50, HEIGHT))

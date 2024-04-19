@@ -48,7 +48,7 @@ class Coins(sprite.Sprite):
     def __init__(self, coin_x, coin_y):
         super().__init__()
         self.rect = Rect(coin_x, coin_y, 25, 25)
-        self.image = transform.scale(image.load("Bitcoin Maze/dollar.png"), (25,25))
+        self.image = transform.scale(image.load("Pygame/Bitcoin Maze/dollar.png"), (25,25))
         
     def draw_coin(self):
         screen.blit(self.image, (self.rect.x, self.rect.y))
