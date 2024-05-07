@@ -97,8 +97,6 @@ class ExpenseApp(QWidget):
         description = self.description.text()
 
         query = QSqlQuery()
-        query.pre
-
 
 if __name__ in "__main__":
     app = QApplication([])
